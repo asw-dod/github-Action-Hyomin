@@ -48,8 +48,8 @@
   1. 가능하다면 Github의 Secrets의 정보도 포함 해야 합니다.
   2. 진행 했다면 아래의 코드를 호출 합니다.
 ```
-# git clone https://github.com/Piorosen/github-Action-HangKik
-# cd github-Action-HangKik
+# git clone https://github.com/Piorosen/github-Action-Hyomin
+# cd github-Action-Hyomin
 # apt install python3-dev
 # pip3 install selenium requests twython pillow PyGithub pytz
 # sudo apt-get install fonts-unfonts-core
