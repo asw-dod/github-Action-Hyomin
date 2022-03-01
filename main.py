@@ -76,8 +76,8 @@ def call(username: str, usernumber: str, userroom: str, temperture: str):
     yes = driver.find_element_by_xpath('//*[@id="mG61Hd"]/div[2]/div/div[2]/div[8]/div/div/div[3]/div/div/span/div/div[1]/label/div')
     yes.click()
 
-    # button = driver.find_element_by_xpath('//*[@id="mG61Hd"]/div[2]/div/div[3]/div[1]/div[1]/div/span')
-    # button.click()
+    button = driver.find_element_by_xpath('//*[@id="mG61Hd"]/div[2]/div/div[3]/div[1]/div[1]/div/span')
+    button.click()
     return
 
 def makeBody(list):
