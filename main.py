@@ -12,7 +12,7 @@ students = [["황진주", "20193148", "508A"]]
 
 def get_github_repo(access_token, repository_name):
     g = Github(access_token)
-    repo = g.get_user().get_repo(repository_name)
+    repo = g.get_organization('asw-dod').get_repo(repository_name)
     return repo
 
 def upload_github_issue(repo, title, body):
@@ -76,8 +76,8 @@ def call(username: str, usernumber: str, userroom: str, temperture: str):
     yes = driver.find_element_by_xpath('//*[@id="mG61Hd"]/div[2]/div/div[2]/div[8]/div/div/div[3]/div/div/span/div/div[1]/label/div')
     yes.click()
 
-    button = driver.find_element_by_xpath('//*[@id="mG61Hd"]/div[2]/div/div[3]/div[1]/div[1]/div/span')
-    button.click()
+    # button = driver.find_element_by_xpath('//*[@id="mG61Hd"]/div[2]/div/div[3]/div[1]/div[1]/div/span')
+    # button.click()
     return
 
 def makeBody(list):
