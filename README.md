@@ -2,12 +2,12 @@
 자동으로 발열 체크를 하고 깃헙 액션을 통해서 자동화를 진행합니다.
 
 ---
-![Badge](https://img.shields.io/github/license/Piorosen/github-Action-HangKik)
-![Badge](https://img.shields.io/github/forks/Piorosen/github-Action-HangKik)
-![Badge](https://img.shields.io/github/stars/Piorosen/github-Action-HangKik)
-![Badge](https://img.shields.io/github/issues-raw/Piorosen/github-Action-HangKik)
-![Badge](https://img.shields.io/github/issues-closed-raw/Piorosen/github-Action-HangKik)
-![Badge](https://img.shields.io/github/last-commit/Piorosen/github-Action-HangKik)
+![Badge](https://img.shields.io/github/license/asw-dod/github-Action-Hyomin)
+![Badge](https://img.shields.io/github/forks/asw-dod/github-Action-Hyomin)
+![Badge](https://img.shields.io/github/stars/asw-dod/github-Action-Hyomin)
+![Badge](https://img.shields.io/github/issues-raw/asw-dod/github-Action-Hyomin)
+![Badge](https://img.shields.io/github/issues-closed-raw/asw-dod/github-Action-Hyomin)
+![Badge](https://img.shields.io/github/last-commit/asw-dod/github-Action-Hyomin)
 [![Badge](https://github.com/asw-dod/github-Action-Hyomin/workflows/test/badge.svg)](https://github.com/asw-dod/github-Action-Hyomin/actions)
 ---
 
