@@ -67,7 +67,9 @@ def call(username: str, usernumber: str, userroom: str, temperture: str):
     fever = driver.find_element_by_xpath('//*[@id="mG61Hd"]/div[2]/div/div[2]/div[5]/div/div/div[2]/div/div[1]/div/div[1]/input')
     fever.send_keys(temperture)
     
-    etc = driver.find_element_by_xpath('//*[@id="mG61Hd"]/div[2]/div/div[2]/div[6]/div/div/div[2]/div/div/span/div/div[4]/label/div')
+    
+    
+    etc = driver.find_element_by_xpath('//*[@id="mG61Hd"]/div[2]/div/div[2]/div[6]/div/div/div[2]/div/div/span/div/div[5]/label/div')
     etc.click()
     
     accept = driver.find_element_by_xpath('//*[@id="mG61Hd"]/div[2]/div/div[2]/div[7]/div/div/div[3]/div/div/span/div/div[1]/label/div')
