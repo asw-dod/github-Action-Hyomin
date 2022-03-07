@@ -47,6 +47,7 @@ driver = webdriver.Chrome('chromedriver', chrome_options=options)
 
 
 def call(username: str, usernumber: str, userroom: str, temperture: str):
+    print("Write : 2022. 03. 07")
     # 원하는 url로 접속
     driver.get('https://docs.google.com/forms/d/e/1FAIpQLScggmdGC-sUiNOTSVmsgzwgw2lfEmqYevrIwZ09E7dSVO17pA/viewform')
     driver.get
