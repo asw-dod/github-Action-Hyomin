@@ -46,7 +46,7 @@ options.add_argument("disable-gpu")
 options.add_argument("--no-sandbox")
 
 # chrome driver
-driver = webdriver.Chrome('./chromedriver.exe', chrome_options=options)
+driver = webdriver.Chrome('chromedriver', chrome_options=options)
 
 
 def call(username: str, usernumber: str, userroom: str, temperture: str, dorm: bool):
