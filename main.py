@@ -8,7 +8,10 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 from github import Github
 
-students = [["황진주", "20193148", "508A"]]
+Hyomin_Dorm = True
+Women_Dorm = False
+
+students = [["황진주", "20193148", "508A", Women_Dorm]]
 
 def get_github_repo(access_token, repository_name):
     g = Github(access_token)
@@ -37,16 +40,16 @@ repository_name = "github-Action-Hyomin"
 options = webdriver.ChromeOptions()
 options.add_argument("start-maximized")
 options.add_argument("lang=ko_KR")
-options.add_argument('headless')
+# options.add_argument('headless')
 options.add_argument('window-size=1920x1080')
 options.add_argument("disable-gpu")
 options.add_argument("--no-sandbox")
 
 # chrome driver
-driver = webdriver.Chrome('chromedriver', chrome_options=options)
+driver = webdriver.Chrome('./chromedriver.exe', chrome_options=options)
 
 
-def call(username: str, usernumber: str, userroom: str, temperture: str):
+def call(username: str, usernumber: str, userroom: str, temperture: str, dorm: bool):
     print("Write : 2022. 03. 07")
     # 원하는 url로 접속
     driver.get('https://docs.google.com/forms/d/e/1FAIpQLScggmdGC-sUiNOTSVmsgzwgw2lfEmqYevrIwZ09E7dSVO17pA/viewform')
@@ -59,16 +62,19 @@ def call(username: str, usernumber: str, userroom: str, temperture: str):
     elemnumber = driver.find_element_by_xpath('//*[@id="mG61Hd"]/div[2]/div/div[2]/div[2]/div/div/div[2]/div/div[1]/div/div[1]/input')
     elemnumber.send_keys(usernumber)
     
-    type = driver.find_element_by_xpath('//*[@id="mG61Hd"]/div[2]/div/div[2]/div[3]/div/div/div[2]/div/div/span/div/div[2]/label/div')
-    type.click()
-    
+    # 효민
+    if dorm:
+        type = driver.find_element_by_xpath('//*[@id="mG61Hd"]/div[2]/div/div[2]/div[3]/div/div/div[2]/div/div/span/div/div[1]/label/div')        
+        type.click()
+    else: # 여자 기숙사
+        type = driver.find_element_by_xpath('//*[@id="mG61Hd"]/div[2]/div/div[2]/div[3]/div/div/div[2]/div/div/span/div/div[2]/label/div')
+        type.click()
+        
     room = driver.find_element_by_xpath('//*[@id="mG61Hd"]/div[2]/div/div[2]/div[4]/div/div/div[2]/div/div[1]/div/div[1]/input')
     room.send_keys(userroom)
     
     fever = driver.find_element_by_xpath('//*[@id="mG61Hd"]/div[2]/div/div[2]/div[5]/div/div/div[2]/div/div[1]/div/div[1]/input')
     fever.send_keys(temperture)
-    
-    
     
     etc = driver.find_element_by_xpath('//*[@id="mG61Hd"]/div[2]/div/div[2]/div[6]/div/div/div[2]/div/div/span/div/div[5]/label/div')
     etc.click()
@@ -98,7 +104,7 @@ for student in students:
     temp = 36 + (temp / 10)
     temp = str(temp)
     student.append(temp)
-    call(student[0], student[1], student[2], temp)
+    call(student[0], student[1], student[2], temp, student[3])
 
 if githubCall:
     repo = get_github_repo(access_token, repository_name)
